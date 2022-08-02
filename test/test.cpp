@@ -33,7 +33,8 @@ int main(int argc, char *argv[]) {
 		return -1;
 	}
 
-	std::cout << "test: " << parsingResult["test"].toString() << "\n";
-	std::cout << "some_integer: " << parsingResult["some_integer"].toLong() << "\n";
-
+	if (parsingResult["test"].isHasValue())
+		std::cout << "test: " << parsingResult["test"].toString() << "\n";
+	if (parsingResult["some_integer"].isHasValue())
+		std::cout << "some_integer: " << parsingResult["some_integer"].toLong() << "\n";
 }
